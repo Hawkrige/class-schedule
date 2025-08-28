@@ -230,7 +230,7 @@ st.markdown(
     """
     <div class="grey-box">
         <h2 style="color:white;">📢 Notices</h2>
-        <p style="color:#cccccc;">Daddy Chill!</p>
+        <p style="color:#cccccc;">If you spot any bugs or mistakes please let me know asap K256558@nu.edu.pk </p>
     </div>
     """,
     unsafe_allow_html=True
@@ -240,6 +240,7 @@ st.markdown(
 # FOOTER
 # ===============================
 st.markdown('<div class="footer">Created by Wassay Ahmed</div>', unsafe_allow_html=True)
+
 
 
 
