@@ -295,9 +295,9 @@ st.markdown(
     <div class="notices-box">
         <h3>📢 Notices</h3>
         <ul>
-            <li>Midterm exams will start from October 15.</li>
-            <li>Lab coats are mandatory for all Physics Labs.</li>
-            <li>Next Friday is a holiday due to a university event.</li>
+            <li>Midgyatt has a big gyatt.</li>
+            <li></li>
+            <li>.</li>
         </ul>
     </div>
     """,
@@ -326,3 +326,4 @@ st.markdown(
 # Footer
 # -------------------------
 st.markdown("<footer>Created by Wassay Ahmed</footer>", unsafe_allow_html=True)
+
