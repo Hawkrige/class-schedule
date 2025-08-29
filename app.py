@@ -67,7 +67,7 @@ st.markdown(
             color: #27ae60;
         }
 
-        /* --- UPDATED: Notices Box --- */
+        /* Notices Box */
         .notices-box {
             background-color: #fef9e7;
             padding: 15px;
@@ -77,7 +77,7 @@ st.markdown(
             color: #2c3e50; /* Make all text inside dark */
         }
         
-        /* --- UPDATED: Assignments Box --- */
+        /* Assignments Box */
         .assignments-box {
             background-color: #eaf2f8; /* light blue */
             padding: 15px;
@@ -287,45 +287,72 @@ else:
                 )
                 prev_end = end
 
-# -------------------------
-# Notices Section
-# -------------------------
-st.markdown(
-    """
-    <div class="notices-box">
-        <h3>📢 Notices</h3>
-        <ul>
-            <li>Please report any bugs or issues at K256558@nu.edu.pk .</li>
-            <li> </li>
-            <li>.</li>
-        </ul>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# ------------------------------------------------------------------
+# DYNAMIC Notices and Assignments Sections
+# ------------------------------------------------------------------
+# Check which section is selected and display content accordingly
+if section == "BSCE-1A":
+    # --- Notices for section 1A ---
+    st.markdown(
+        """
+        <div class="notices-box">
+            <h3>📢 Notices for BSCE-1A</h3>
+            <ul>
+                <li>Section 1A: Midterm review session is on Tuesday.</li>
+                <li>Reminder: Submit your lab reports online.</li>
+            </ul>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    # --- Assignments for section 1A ---
+    st.markdown(
+        """
+        <div class="assignments-box">
+            <h3>📝 Assignments Due for BSCE-1A</h3>
+            <ul>
+                <li><b>Calculus:</b> Problem Set A-5 due Friday.</li>
+                <li><b>Programming:</b> Project Alpha due next week.</li>
+            </ul>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-# -------------------------
-# Assignments Section
-# -------------------------
-st.markdown(
-    """
-    <div class="assignments-box">
-        <h3>📝 Assignments Due</h3>
-        <ul>
-            <li><b> </b>  .</li>
-            <li><b> </b> .</li>
-            <li><b> </b> .</li>
-        </ul>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+elif section == "BSCE-1B":
+    # --- Notices for section 1B ---
+    st.markdown(
+        """
+        <div class="notices-box">
+            <h3>📢 Notices for BSCE-1B</h3>
+            <ul>
+                <li>Section 1B: The lab session on Wednesday is cancelled.</li>
+                <li>Please form your project groups by the end of this week.</li>
+            </ul>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    # --- Assignments for section 1B ---
+    st.markdown(
+        """
+        <div class="assignments-box">
+            <h3>📝 Assignments Due for BSCE-1B</h3>
+            <ul>
+                <li><b>Physics:</b> Reading for Chapter 6 due Monday.</li>
+                <li><b>Calculus:</b> Problem Set B-4 due Thursday.</li>
+            </ul>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 
 # -------------------------
 # Footer
 # -------------------------
 st.markdown("<footer>Created by Wassay Ahmed</footer>", unsafe_allow_html=True)
+
 
 
 
