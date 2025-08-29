@@ -11,6 +11,9 @@ st.set_page_config(page_title="Class Schedule", layout="wide")
 # -------------------------
 # Custom CSS for styling
 # -------------------------
+# -------------------------
+# Custom CSS for styling
+# -------------------------
 st.markdown(
     """
     <style>
@@ -83,6 +86,11 @@ st.markdown(
             border-radius: 12px;
             margin-top: 20px;
             box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+        }
+
+        /* --- FIX: Force dark text color for headings in info boxes --- */
+        .notices-box h3, .assignments-box h3 {
+            color: #2c3e50 !important;
         }
 
         /* Status Box for Now/Next */
@@ -324,8 +332,6 @@ st.markdown(
 # Footer
 # -------------------------
 st.markdown("<footer>Created by Wassay Ahmed</footer>", unsafe_allow_html=True)
-
-
 
 
 
