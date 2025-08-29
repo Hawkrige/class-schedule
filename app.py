@@ -296,7 +296,7 @@ st.markdown(
         <h3>📢 Notices</h3>
         <ul>
             <li>Please report any bugs or issues at K256558@nu.edu.pk .</li>
-            <li></li>
+            <li> </li>
             <li>.</li>
         </ul>
     </div>
@@ -312,9 +312,9 @@ st.markdown(
     <div class="assignments-box">
         <h3>📝 Assignments Due</h3>
         <ul>
-            <li><b>Physics:</b>  .</li>
-            <li><b>Calculus:</b> .</li>
-            <li><b>Programming:</b> .</li>
+            <li><b> </b>  .</li>
+            <li><b> </b> .</li>
+            <li><b> </b> .</li>
         </ul>
     </div>
     """,
@@ -326,5 +326,6 @@ st.markdown(
 # Footer
 # -------------------------
 st.markdown("<footer>Created by Wassay Ahmed</footer>", unsafe_allow_html=True)
+
 
 
