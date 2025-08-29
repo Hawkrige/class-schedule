@@ -11,9 +11,6 @@ st.set_page_config(page_title="Class Schedule", layout="wide")
 # -------------------------
 # Custom CSS for styling
 # -------------------------
-# -------------------------
-# Custom CSS for styling
-# -------------------------
 st.markdown(
     """
     <style>
@@ -88,7 +85,7 @@ st.markdown(
             box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
         }
 
-        /* --- FIX: Force dark text color for headings in info boxes --- */
+        /* Force dark text color for headings in info boxes */
         .notices-box h3, .assignments-box h3 {
             color: #2c3e50 !important;
         }
@@ -268,7 +265,7 @@ else:
                     gap_minutes = (start - prev_end).total_seconds() / 60
                     if gap_minutes > 15: # Only display breaks longer than 15 mins
                         
-                        # --- NEW: Calculate hours and minutes for display ---
+                        # Calculate hours and minutes for display
                         hours = int(gap_minutes // 60)
                         minutes = int(gap_minutes % 60)
                         
