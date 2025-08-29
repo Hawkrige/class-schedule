@@ -1,245 +1,330 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
+import pytz
 
-# ===============================
-# PAGE CONFIG
-# ===============================
+# -------------------------
+# Page Config
+# -------------------------
 st.set_page_config(page_title="Class Schedule", layout="wide")
 
-# ===============================
-# CUSTOM STYLES (Animated Gradient + Dark Theme)
-# ===============================
+# -------------------------
+# Custom CSS for styling
+# -------------------------
 st.markdown(
     """
     <style>
-    .stApp {
-        background: linear-gradient(-45deg, #1e1e2f, #2c2c54, #3a3a80, #24243e);
-        background-size: 400% 400%;
-        animation: gradient 12s ease infinite;
-        color: #ffffff;
-    }
-    @keyframes gradient {
-        0% {background-position: 0% 50%;}
-        50% {background-position: 100% 50%;}
-        100% {background-position: 0% 50%;}
-    }
-    .grey-box {
-        background-color: #2e2e2e;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    .info-box {
-        background-color: #333333;
-        padding: 15px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    .break-box {
-        background-color: #2e7d32;
-        padding: 12px;
-        border-radius: 10px;
-        margin-bottom: 15px;
-        text-align: center;
-        font-weight: bold;
-    }
-    .long-break-box {
-        background-color: #1b5e20;
-        padding: 12px;
-        border-radius: 10px;
-        margin-bottom: 15px;
-        text-align: center;
-        font-weight: bold;
-    }
-    .footer {
-        text-align: center;
-        color: #aaaaaa;
-        font-size: 12px;
-        margin-top: 30px;
-    }
-    .stTabs [role="tab"] {
-        background-color: #444 !important;
-        color: white !important;
-        font-weight: bold;
-        border-radius: 6px;
-        padding: 8px 12px;
-        margin-right: 5px;
-    }
-    .stTabs [role="tab"][aria-selected="true"] {
-        background-color: #ff9800 !important;
-        color: black !important;
-    }
+        /* Animated gradient background */
+        .stApp {
+            background: linear-gradient(-45deg, #a18cd1, #fbc2eb, #8ec5fc, #e0c3fc);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        /* Title Box */
+        .title-box {
+            background-color: #2c3e50; /* dark grey */
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .title-box h1 {
+            color: #5dade2;
+            margin: 0;
+        }
+        .title-box h3 {
+            color: #5dade2;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        /* Class Box */
+        .class-box {
+            background-color: #34495e; /* dark grey */
+            padding: 12px;
+            border-radius: 12px;
+            margin: 8px 0;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.25);
+            color: white;
+        }
+
+        /* Breaks */
+        .break-box {
+            background-color: #d5f5e3;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 8px 0;
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        /* Notices Box */
+        .notices-box {
+            background-color: #fef9e7;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+        }
+        
+        /* Assignments Box */
+        .assignments-box {
+            background-color: #eaf2f8; /* light blue */
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+        }
+
+        /* Status Box for Now/Next */
+        .status-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 5px 20px 20px 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .status-box {
+            background-color: #34495e;
+            padding: 12px;
+            border-radius: 12px;
+            margin: 10px 0;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Tabs */
+        .stTabs [role="tab"] {
+            font-weight: bold;
+            color: white !important;
+        }
+        .stTabs [role="tab"][aria-selected="true"] {
+            color: #5dade2 !important;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 1.25em; /* 25% larger */
+            margin-top: 40px;
+            color: #2c3e50;
+        }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# ===============================
-# SECTION SELECTION (inside grey box)
-# ===============================
-st.markdown('<div class="grey-box">', unsafe_allow_html=True)
-section = st.radio("Select your section:", ["A", "B"], horizontal=True)
-st.markdown('</div>', unsafe_allow_html=True)
+# -------------------------
+# Load Data
+# -------------------------
+def load_schedule(file):
+    try:
+        return pd.read_csv(file)
+    except FileNotFoundError:
+        st.error(f"Error: The file '{file}' was not found. Please make sure it's in the same directory.")
+        return pd.DataFrame() # Return empty dataframe on error
 
-if section == "A":
-    section_title = "BSCE-1A"
-    file_name = "scheduleA.csv"
-else:
-    section_title = "BSCE-1B"
-    file_name = "scheduleB.csv"
+scheduleA = load_schedule("scheduleA.csv")
+scheduleB = load_schedule("scheduleB.csv")
 
-# ===============================
-# LOAD DATA
-# ===============================
-df = pd.read_csv(file_name)
-df.columns = df.columns.str.strip().str.lower()
+# -------------------------
+# Section Selector
+# -------------------------
+section = st.radio(
+    "Select Section",
+    ["BSCE-1A", "BSCE-1B"],
+    horizontal=True,
+    key="section_selector"
+)
 
-# ===============================
-# TITLE + SUBTITLE BOX
-# ===============================
+schedule = scheduleA if section == "BSCE-1A" else scheduleB
+
+# -------------------------
+# Title Box
+# -------------------------
 st.markdown(
     f"""
-    <div class="grey-box">
-        <h1 style="color:white;">{section_title}</h1>
-        <p style="color:#cccccc;">Schedule made easy</p>
+    <div class="title-box">
+        <h1>{section}</h1>
+        <h3>Schedule Made Easy</h3>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-# ===============================
-# FUNCTIONS
-# ===============================
-def get_current_class(data):
-    now = datetime.now().strftime("%H:%M")
-    today = datetime.now().strftime("%A").lower()
-    today_classes = data[data["day"].str.lower() == today]
-    for _, row in today_classes.iterrows():
-        if row["start_time"] <= now <= row["end_time"]:
-            return row
-    return None
+# -----------------------------------
+# Happening Now & Next Up Box
+# -----------------------------------
+st.markdown('<div class="status-container">', unsafe_allow_html=True)
 
-def get_next_class(data):
-    now = datetime.now().strftime("%H:%M")
-    today = datetime.now().strftime("%A").lower()
-    today_classes = data[data["day"].str.lower() == today]
-    upcoming = today_classes[today_classes["start_time"] > now]
-    if not upcoming.empty:
-        return upcoming.iloc[0]
-    return None
+# Define the timezone for GMT+5
+tz = pytz.timezone('Asia/Karachi')
 
-def display_breaks(day_classes):
-    """Show breaks between classes"""
-    day_classes_sorted = day_classes.sort_values("start_time").reset_index(drop=True)
-    for i in range(len(day_classes_sorted) - 1):
-        end_current = datetime.strptime(day_classes_sorted.loc[i, "end_time"], "%H:%M")
-        start_next = datetime.strptime(day_classes_sorted.loc[i+1, "start_time"], "%H:%M")
-        gap_minutes = (start_next - end_current).total_seconds() / 60
+# Get current time in the specified timezone
+now = datetime.now(tz)
+current_time_obj = now.time()
+today = now.strftime("%A")
 
-        if gap_minutes > 120:
-            st.markdown(
-                f'<div class="long-break-box">☕☕ Long Break ({int(gap_minutes)} min)</div>',
-                unsafe_allow_html=True
-            )
-        elif gap_minutes > 30:
-            st.markdown(
-                f'<div class="break-box">☕ Break ({int(gap_minutes)} min)</div>',
-                unsafe_allow_html=True
-            )
+today_schedule = schedule[schedule["Day"] == today].copy()
 
-# ===============================
-# HAPPENING NOW + NEXT UP SECTION
-# ===============================
-current_class = get_current_class(df)
-next_class = get_next_class(df)
+current_class = None
+next_class = None
 
-st.markdown('<div class="info-box">', unsafe_allow_html=True)
-st.subheader("📌 What's Happening Today")
+if not today_schedule.empty:
+    # Convert time strings to datetime.time objects for correct comparison
+    today_schedule['start_time_obj'] = pd.to_datetime(today_schedule['Start_Time'], format='%H:%M').dt.time
+    today_schedule['end_time_obj'] = pd.to_datetime(today_schedule['End_Time'], format='%H:%M').dt.time
+
+    # Sort schedule chronologically
+    today_schedule = today_schedule.sort_values(by="start_time_obj")
+
+    for _, row in today_schedule.iterrows():
+        # Check for the currently happening class
+        if row['start_time_obj'] <= current_time_obj <= row['end_time_obj']:
+            current_class = row
+        # Find the *first* class that is after the current time
+        elif row['start_time_obj'] > current_time_obj and next_class is None:
+            next_class = row
 
 if current_class is not None:
     st.markdown(
         f"""
-        <b>Happening Now:</b> 📘 {current_class['course']} <br>
-        👤 {current_class['teacher']} | 📍 {current_class['venue']} <br>
-        ⏰ {current_class['start_time']} - {current_class['end_time']}
+        <div class="status-box">
+            📘 Happening Now: <br>
+            {current_class['Course']} <br>
+            ⏰ {current_class['Start_Time']} - {current_class['End_Time']} <br>
+            👨‍🏫 {current_class['Teacher']} <br>
+            📍 {current_class['Venue']}
+        </div>
         """,
         unsafe_allow_html=True
     )
-else:
-    st.markdown("✅ No class is happening right now.", unsafe_allow_html=True)
 
 if next_class is not None:
     st.markdown(
         f"""
-        <br><b>Next Up:</b> 📘 {next_class['course']} <br>
-        👤 {next_class['teacher']} | 📍 {next_class['venue']} <br>
-        ⏰ {next_class['start_time']} - {next_class['end_time']}
+        <div class="status-box">
+            ⏭️ Next Up: <br>
+            {next_class['Course']} <br>
+            ⏰ {next_class['Start_Time']} - {next_class['End_Time']} <br>
+            👨‍🏫 {next_class['Teacher']} <br>
+            📍 {next_class['Venue']}
+        </div>
         """,
         unsafe_allow_html=True
     )
-else:
-    st.markdown("<br>🎉 No upcoming class today.", unsafe_allow_html=True)
+
+# Handle cases where there are no classes today or classes are over
+if today_schedule.empty:
+    st.info(f"🎉 No classes scheduled for today ({today})!")
+elif current_class is None and next_class is None:
+    st.info("🎉 All classes for today are over!")
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# ===============================
-# TABS FOR EACH DAY
-# ===============================
-days = df["day"].unique().tolist()
-tabs = st.tabs(days)
+# -------------------------
+# Tabs for Days
+# -------------------------
+day_order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+days = sorted(schedule["Day"].unique(), key=lambda day: day_order.index(day) if day in day_order else -1)
 
-for i, day in enumerate(days):
-    with tabs[i]:
-        st.markdown(f"## {day}")
-        day_classes = df[df["day"] == day].sort_values("start_time")
+if not days:
+    st.warning("The selected schedule file is empty or invalid.")
+else:
+    tabs = st.tabs(days)
+    # -------------------------
+    # Show schedule per day
+    # -------------------------
+    for i, day in enumerate(days):
+        with tabs[i]:
+            day_schedule = schedule[schedule["Day"] == day].copy()
+            
+            day_schedule['Start_Time_dt'] = pd.to_datetime(day_schedule['Start_Time'], format='%H:%M')
+            day_schedule = day_schedule.sort_values(by="Start_Time_dt")
 
-        for j in range(len(day_classes)):
-            row = day_classes.iloc[j]
-            st.markdown(
-                f"""
-                <div class="info-box">
-                    📘 <b>{row['course']}</b><br>
-                    👤 {row['teacher']} | 📍 {row['venue']}<br>
-                    ⏰ {row['start_time']} - {row['end_time']}
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
-            # Display breaks between this class and the next
-            if j < len(day_classes) - 1:
-                end_current = datetime.strptime(row["end_time"], "%H:%M")
-                start_next = datetime.strptime(day_classes.iloc[j+1]["start_time"], "%H:%M")
-                gap_minutes = (start_next - end_current).total_seconds() / 60
-                if gap_minutes > 120:
-                    st.markdown(
-                        f'<div class="long-break-box">☕☕ Long Break ({int(gap_minutes)} min)</div>',
-                        unsafe_allow_html=True
-                    )
-                elif gap_minutes > 30:
-                    st.markdown(
-                        f'<div class="break-box">☕ Break ({int(gap_minutes)} min)</div>',
-                        unsafe_allow_html=True
-                    )
+            prev_end = None
+            for _, row in day_schedule.iterrows():
+                start = datetime.strptime(row["Start_Time"], "%H:%M")
+                end = datetime.strptime(row["End_Time"], "%H:%M")
 
-# ===============================
-# NOTICES
-# ===============================
+                if prev_end:
+                    gap_minutes = (start - prev_end).total_seconds() / 60
+                    if gap_minutes > 15: # Only display breaks longer than 15 mins
+                        
+                        # --- NEW: Calculate hours and minutes for display ---
+                        hours = int(gap_minutes // 60)
+                        minutes = int(gap_minutes % 60)
+                        
+                        display_text = ""
+                        if hours > 0:
+                            display_text += f"{hours} hr "
+                        if minutes > 0:
+                            display_text += f"{minutes} min"
+                        
+                        st.markdown(f'<div class="break-box">☕ Break ({display_text.strip()})</div>', unsafe_allow_html=True)
+
+                st.markdown(
+                    f"""
+                    <div class="class-box">
+                        <b>📘 {row['Course']}</b><br>
+                        ⏰ {row['Start_Time']} - {row['End_Time']}<br>
+                        👨‍🏫 {row['Teacher']}<br>
+                        📍 {row['Venue']}
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+                prev_end = end
+
+# -------------------------
+# Notices Section
+# -------------------------
 st.markdown(
     """
-    <div class="grey-box">
-        <h2 style="color:white;">📢 Notices</h2>
-        <p style="color:#cccccc;">If you spot any bugs or mistakes please let me know asap K256558@nu.edu.pk, bsce-1A class order mismatch issue is known </p>
+    <div class="notices-box">
+        <h3>📢 Notices</h3>
+        <ul>
+            <li>Midterm exams will start from October 15.</li>
+            <li>Lab coats are mandatory for all Physics Labs.</li>
+            <li>Next Friday is a holiday due to a university event.</li>
+        </ul>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-# ===============================
-# FOOTER
-# ===============================
-st.markdown('<div class="footer">Created by Wassay Ahmed</div>', unsafe_allow_html=True)
+# -------------------------
+# Assignments Section
+# -------------------------
+st.markdown(
+    """
+    <div class="assignments-box">
+        <h3>📝 Assignments Due</h3>
+        <ul>
+            <li><b>Physics:</b> Lab Report #3 due next Monday.</li>
+            <li><b>Calculus:</b> Problem Set 5 due next Wednesday.</li>
+            <li><b>Programming:</b> Final Project proposal due in two weeks.</li>
+        </ul>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+# -------------------------
+# Footer
+# -------------------------
+st.markdown("<footer>Created by Wassay Ahmed</footer>", unsafe_allow_html=True)
+
 
 
 
