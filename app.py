@@ -67,27 +67,24 @@ st.markdown(
             color: #27ae60;
         }
 
-        /* Notices Box */
+        /* --- UPDATED: Notices Box --- */
         .notices-box {
             background-color: #fef9e7;
             padding: 15px;
             border-radius: 12px;
             margin-top: 20px;
             box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+            color: #2c3e50; /* Make all text inside dark */
         }
         
-        /* Assignments Box */
+        /* --- UPDATED: Assignments Box --- */
         .assignments-box {
             background-color: #eaf2f8; /* light blue */
             padding: 15px;
             border-radius: 12px;
             margin-top: 20px;
             box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
-        }
-
-        /* Force dark text color for headings in info boxes */
-        .notices-box h3, .assignments-box h3 {
-            color: #2c3e50 !important;
+            color: #2c3e50; /* Make all text inside dark */
         }
 
         /* Status Box for Now/Next */
@@ -329,10 +326,3 @@ st.markdown(
 # Footer
 # -------------------------
 st.markdown("<footer>Created by Wassay Ahmed</footer>", unsafe_allow_html=True)
-
-
-
-
-
-
-
