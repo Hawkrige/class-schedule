@@ -298,8 +298,8 @@ if section == "BSCE-1A":
         <div class="notices-box">
             <h3>📢 Notices for BSCE-1A</h3>
             <ul>
-                <li>Section 1A: Midterm review session is on Tuesday.</li>
-                <li>Reminder: Submit your lab reports online.</li>
+                <li>Report any bugs or issues at k256558@nu.edu.pk </li>
+                <li></li>
             </ul>
         </div>
         """,
@@ -311,8 +311,8 @@ if section == "BSCE-1A":
         <div class="assignments-box">
             <h3>📝 Assignments Due for BSCE-1A</h3>
             <ul>
-                <li><b>Calculus:</b> Problem Set A-5 due Friday.</li>
-                <li><b>Programming:</b> Project Alpha due next week.</li>
+                <li><b></li>
+                <li><b></li>
             </ul>
         </div>
         """,
@@ -326,8 +326,8 @@ elif section == "BSCE-1B":
         <div class="notices-box">
             <h3>📢 Notices for BSCE-1B</h3>
             <ul>
-                <li>Section 1B: The lab session on Wednesday is cancelled.</li>
-                <li>Please form your project groups by the end of this week.</li>
+                <li>Report any bugs or issues at k256558@nu.edu.pk</li>
+                <li> </li>
             </ul>
         </div>
         """,
@@ -339,8 +339,8 @@ elif section == "BSCE-1B":
         <div class="assignments-box">
             <h3>📝 Assignments Due for BSCE-1B</h3>
             <ul>
-                <li><b>Physics:</b> Reading for Chapter 6 due Monday.</li>
-                <li><b>Calculus:</b> Problem Set B-4 due Thursday.</li>
+                <li><b>Physics:</b> </li>
+                <li><b>Calculus:</b> </li>
             </ul>
         </div>
         """,
@@ -352,6 +352,7 @@ elif section == "BSCE-1B":
 # Footer
 # -------------------------
 st.markdown("<footer>Created by Wassay Ahmed</footer>", unsafe_allow_html=True)
+
 
 
 
