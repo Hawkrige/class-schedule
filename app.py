@@ -298,7 +298,7 @@ if section == "BSCE-1A":
         <div class="notices-box">
             <h3>📢 Notices for BSCE-1A</h3>
             <ul>
-                <li>Report any bugs or issues at k256558@nu.edu.pk </li>
+                <li>Report any bugs/issues or change of schedule at k256558@nu.edu.pk </li>
                 <li></li>
             </ul>
         </div>
