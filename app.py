@@ -299,7 +299,7 @@ if section == "BSCE-1A":
             <h3>📢 Notices for BSCE-1A</h3>
             <ul>
                 <li>Report any bugs/issues or change of schedule to me on Whatsapp </li>
-                <li></li>
+                <li>Collaborator required from Sec A to update assignments (Requirement: A GitHub account) </li>
             </ul>
         </div>
         """,
