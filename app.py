@@ -327,7 +327,7 @@ elif section == "BSCE-1B":
             <h3>📢 Notices for BSCE-1B</h3>
             <ul>
                 <li>Report any bugs or issues to me on whatsapp </li>
-                <li> Habib bhutto has won elections </li>
+                <li> Habib Ahmed has won the elections 🎉 </li>
             </ul>
         </div>
         """,
