@@ -298,7 +298,7 @@ if section == "BSCE-1A":
         <div class="notices-box">
             <h3>📢 Notices for BSCE-1A</h3>
             <ul>
-                <li>Report any bugs/issues or change of schedule at k256558@nu.edu.pk </li>
+                <li>Report any bugs/issues or change of schedule to me on Whatsapp </li>
                 <li></li>
             </ul>
         </div>
@@ -326,8 +326,8 @@ elif section == "BSCE-1B":
         <div class="notices-box">
             <h3>📢 Notices for BSCE-1B</h3>
             <ul>
-                <li>Report any bugs or issues at k256558@nu.edu.pk</li>
-                <li> </li>
+                <li>Report any bugs or issues to me on whatsapp </li>
+                <li> Habib bhutto has won elections </li>
             </ul>
         </div>
         """,
