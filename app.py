@@ -327,7 +327,7 @@ elif section == "BSCE-1B":
             <h3>📢 Notices for BSCE-1B</h3>
             <ul>
                 <li>Report any bugs or issues to me on whatsapp </li>
-                <li> Habib Ahmed has won the elections 🎉 </li>
+                <li> Calculus Quiz will be scheduled after completion of Ex 3 as per Book </li>
             </ul>
         </div>
         """,
@@ -339,9 +339,9 @@ elif section == "BSCE-1B":
         <div class="assignments-box">
             <h3>📝 Assignments Due for BSCE-1B</h3>
             <ul>
-                <li><b>Physics Lab:Complete Lab 1 Task </b> </li>
-                <li><b>ICT: Complete Lab Tasks as per given manual </b> </li>
-                <li><b> ICP: Write a 1500 word essay on a personality involved in formation of ideology of Pak </b></li>
+                <li><b>Physics Lab:Complete Lab 1 (All Tasks) </b> </li>
+                <li><b> </b> </li>
+                <li><b> ICP: Write a 1500 word essay on a personality involved in formation of ideology of Subcontinent </b></li>
                 <li><b> Eng: Complete Excercise 7-15 in the manual </b></li>
             </ul>
         </div>
