@@ -328,6 +328,7 @@ elif section == "BSCE-1B":
             <ul>
                 <li>Report any bugs or issues to me on whatsapp </li>
                 <li> Calculus Quiz will be scheduled after completion of Ex 3 as per Book </li>
+                <li> AP  Quiz will scheduled in the 5th week <li>
             </ul>
         </div>
         """,
@@ -354,6 +355,7 @@ elif section == "BSCE-1B":
 # Footer
 # -------------------------
 st.markdown("<footer>Created by Wassay Ahmed</footer>", unsafe_allow_html=True)
+
 
 
 
