@@ -299,7 +299,7 @@ if section == "BSCE-1A":
             <h3>📢 Notices for BSCE-1A</h3>
             <ul>
                 <li>Report any bugs/issues or change of schedule to me on Whatsapp </li>
-                <li>Collaborator required from Sec A to update assignments (Requirement: A GitHub account) </li>
+                <li> </li>
             </ul>
         </div>
         """,
@@ -339,9 +339,9 @@ elif section == "BSCE-1B":
         <div class="assignments-box">
             <h3>📝 Assignments Due for BSCE-1B</h3>
             <ul>
-                <li><b>Physics Lab:Complete Lab 1 (All Tasks) </b> </li>
+                <li><b>Physics Lab:Complete Lab 1 all tasks (Submission on Thursday) </b> </li>
                 <li><b> </b> </li>
-                <li><b> ICP: Write a 1500 word essay on a personality involved in formation of ideology of Subcontinent </b></li>
+                <li><b> Applied Physics: Complete all examples for vectors and forces given in slides </b></li>
                 <li><b> Eng: Complete Excercise 7-15 in the manual </b></li>
             </ul>
         </div>
