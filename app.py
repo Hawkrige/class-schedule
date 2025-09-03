@@ -342,7 +342,7 @@ elif section == "BSCE-1B":
             <ul>
                 <li><b>Physics Lab:Complete Lab 1 all tasks (Submission on Thursday) </b> </li>
                 <li><b>ICT:write a brief two-page assignment on the history of computers (500_600 words). [Submission on Saturday through GCR{  </b></li>
-                <li><b> Applied Physics: Complete all examples for vectors and forces given in slides </b></li>
+                <li><b> Applied Physics: Attempt Questions sent on GCR (Submission on 15th Sept) </b></li>
                 <li><b> Eng: Complete Excercise 7-15 in the manual </b></li>
             </ul>
         </div>
