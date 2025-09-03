@@ -328,7 +328,7 @@ elif section == "BSCE-1B":
             <ul>
                 <li>Report any bugs or issues to me on whatsapp </li>
                 <li> Calculus Quiz will be scheduled after completion of Ex 3 as per Book </li>
-                <li> AP  Quiz will scheduled in the 5th week <li>
+                <li> AP Quiz will scheduled in the 5th week <li>
             </ul>
         </div>
         """,
@@ -341,7 +341,7 @@ elif section == "BSCE-1B":
             <h3>📝 Assignments Due for BSCE-1B</h3>
             <ul>
                 <li><b>Physics Lab:Complete Lab 1 all tasks (Submission on Thursday) </b> </li>
-                <li><b> </b> </li>
+                <li><b>ICT:write a brief two-page assignment on the history of computers (500_600 words). [Submission on Saturday through GCR{  </b></li>
                 <li><b> Applied Physics: Complete all examples for vectors and forces given in slides </b></li>
                 <li><b> Eng: Complete Excercise 7-15 in the manual </b></li>
             </ul>
