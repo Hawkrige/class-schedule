@@ -329,7 +329,8 @@ elif section == "BSCE-1B":
             <ul>
                 <li>Report any bugs or issues to me on whatsapp </li>
                 <li> Calculus Quiz will be scheduled after completion of Ex 3 as per Book </li>
-                <li> AP Quiz will scheduled in the 5th week <li>
+                <li> AP Quiz is scheduled on 15th Sept   <li>
+                <li> University is off on 5th sept,Friday <li>
             </ul>
         </div>
         """,
