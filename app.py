@@ -341,7 +341,7 @@ elif section == "BSCE-1B":
         <div class="assignments-box">
             <h3>📝 Assignments Due for BSCE-1B</h3>
             <ul>
-                <li><b>Physics Lab:Complete Lab 1 all tasks (Submission on Thursday) </b> </li>
+                <li><b>ICT Lab:Complete Lab 2 : Intro to ChatGpt and overleaf (Submission on Monday) </b> </li>
                 <li><b>ICT:write a brief two-page assignment on the history of computers (500_600 words). [Submission on Saturday through GCR{  </b></li>
                 <li><b> Applied Physics: Attempt Questions sent on GCR (Submission on 15th Sept) </b></li>
                 <li><b> Eng: Complete Excercise 7-15 in the manual </b></li>
