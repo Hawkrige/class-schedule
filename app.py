@@ -311,8 +311,9 @@ if section == "BSCE-1A":
         <div class="assignments-box">
             <h3>📝 Assignments Due for BSCE-1A</h3>
             <ul>
-                <li><b></li>
-                <li><b></li>
+                <li><b>Physics Lab:Complete Lab 1 and Lab 3 all tasks (DUE FRIDAY) </b> </li>
+                <li><b>ICT:write a brief two-page assignment on the history of computers (500_600 words). [Submission on Saturday through GCR] </b></li>
+                
             </ul>
         </div>
         """,
