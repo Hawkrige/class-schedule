@@ -314,7 +314,7 @@ if section == "BSCE-1A":
                 <li><b>Physics Lab:Complete Lab 1 and Lab 3 all tasks (DUE FRIDAY) </b> </li>
                 <li><b>ICT:write a brief two-page assignment on the history of computers (500_600 words). [Submission on Saturday through GCR] </b></li>
                 
-            </ul>
+            }</ul>
         </div>
         """,
         unsafe_allow_html=True
