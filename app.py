@@ -331,6 +331,7 @@ elif section == "BSCE-1B":
                 <li> Calculus Quiz will be scheduled after completion of Ex 3 as per Book </li>
                 <li> AP Quiz is scheduled on 15th Sept   <li>
                 <li> University is off on 5th sept,Friday <li>
+                
             </ul>
         </div>
         """,
@@ -346,6 +347,7 @@ elif section == "BSCE-1B":
                 <li><b>ICT:write a brief two-page assignment on the history of computers (500_600 words). [Submission on Saturday through GCR{  </b></li>
                 <li><b> Applied Physics: Attempt Questions sent on GCR (Submission on 15th Sept) </b></li>
                 <li><b> Eng: Complete Excercise 7-15 in the manual </b></li>
+                <li><b> Calculus: Complete Chapter 2 & 3 Questions (Uploaded on GCR)</b><li>
             </ul>
         </div>
         """,
