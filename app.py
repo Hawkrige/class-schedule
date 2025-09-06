@@ -312,7 +312,7 @@ if section == "BSCE-1A":
             <h3>📝 Assignments Due for BSCE-1A</h3>
             <ul>
                 <li><b>Physics Lab:Complete Lab 1 and Lab 3 all tasks (DUE FRIDAY) </b> </li>
-                <li><b>ICT:write a brief two-page assignment on the history of computers (500_600 words). [Submission on Saturday through GCR] </b></li>
+                <li><b>ICT:write a brief two-page assignment on the history of computers (500-600 words). [Submission on Saturday through GCR] </b></li>
                 
             </ul>
         </div>
@@ -330,7 +330,7 @@ elif section == "BSCE-1B":
                 <li>Report any bugs or issues to me on whatsapp </li>
                 <li> Calculus Quiz will be scheduled after completion of Ex 3 as per Book </li>
                 <li> AP Quiz is scheduled on 15th Sept   <li>
-                <li> University is off on 5th sept,Friday <li>
+                <li> University is off on 5th sept,Friday </li>
                 
             </ul>
         </div>
