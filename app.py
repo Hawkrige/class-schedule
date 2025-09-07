@@ -299,7 +299,7 @@ if section == "BSCE-1A":
             <h3>📢 Notices for BSCE-1A</h3>
             <ul>
                 <li>Report any bugs/issues or change of schedule to me on Whatsapp </li>
-                <li>All classes scheduled for 8th and 9th Sept will be conducted online due to adverse weather</li>
+                <li><b>All classes scheduled for 8th and 9th Sept will be conducted online due to adverse weather</b></li>
             </ul>
         </div>
         """,
@@ -330,7 +330,7 @@ elif section == "BSCE-1B":
                 <li>Report any bugs or issues to me on whatsapp </li>
                 <li> Calculus Quiz will be scheduled after completion of Ex 3 as per Book </li>
                 <li> AP Quiz is scheduled on 15th Sept   li>
-                <li> All classes scheduled for 8th and 9th Sept will be conducted online </li>
+                <li> <b>All classes scheduled for 8th and 9th Sept will be conducted online</b> </li>
                 
             </ul>
         </div>
@@ -344,7 +344,7 @@ elif section == "BSCE-1B":
             <h3>📝 Assignments Due for BSCE-1B</h3>
             <ul>
                 <li><b>ICT Lab:Complete Lab 2 : Intro to ChatGpt and overleaf (Submission on Monday) </b> </li>
-                <li><b>ICT:write a brief two-page assignment on the history of computers (500_600 words). [Submission on Saturday through GCR{  </b></li>
+                <li><b>  </b></li>
                 <li><b> Applied Physics: Attempt Questions sent on GCR (Submission on 15th Sept) </b></li>
                 <li><b> Eng: Complete Excercise 7-15 in the manual </b></li>
                 <li><b> Calculus: Complete Chapter 2 & 3 Questions (Uploaded on GCR)</b><li>
