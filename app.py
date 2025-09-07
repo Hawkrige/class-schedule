@@ -299,7 +299,7 @@ if section == "BSCE-1A":
             <h3>📢 Notices for BSCE-1A</h3>
             <ul>
                 <li>Report any bugs/issues or change of schedule to me on Whatsapp </li>
-                <li> </li>
+                <li>All classes on scheduled for 8th and 9th Sept will be conducted online </li>
             </ul>
         </div>
         """,
@@ -330,7 +330,7 @@ elif section == "BSCE-1B":
                 <li>Report any bugs or issues to me on whatsapp </li>
                 <li> Calculus Quiz will be scheduled after completion of Ex 3 as per Book </li>
                 <li> AP Quiz is scheduled on 15th Sept   <li>
-                <li> University is off on 5th sept,Friday </li>
+                <li> All classes on scheduled for 8th and 9th Sept will be conducted online </li>
                 
             </ul>
         </div>
