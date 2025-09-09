@@ -328,7 +328,7 @@ elif section == "BSCE-1B":
             <h3>📢 Notices for BSCE-1B</h3>
             <ul>
                 <li>Report any bugs or issues to me on whatsapp </li>
-                <li> Calculus Quiz will be scheduled after completion of Ex 3 as per Book </li>
+                <li> Calculus Quiz is scheduled on Friday at 10:45am in C-15 </li>
                 <li> AP Quiz is scheduled on 15th Sept   li>
                 <li> <b>All classes scheduled for 8th and 9th Sept will be conducted online</b> </li>
                 
