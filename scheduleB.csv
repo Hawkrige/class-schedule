@@ -1,6 +1,7 @@
 Day,Start_Time,End_Time,Course,Teacher,Venue
-Monday,08:00,09:45,Islamiat,Dr. Shahzad,C-14
-Monday,12:35,13:25,Calculus,Engr. Qurat ul Ain,C-15
+Monday,08:55,09:45,Islamiat,Dr. Shahzad,C-14
+Monday,11:40,12:30,Islamiat,Dr. Shahzad,C-15
+Monday,12:35,13:25,Calculus,Engr. Qurat ul Ain,C-13
 Monday,14:25,16:05,English,Ms. Tahira,C-13
 Tuesday,08:00,08:50,Applied Physics,Engr. Maham,C-14
 Tuesday,09:50,11:35,Calculus,Engr. Qurat ul Ain,C-13
@@ -13,3 +14,4 @@ Thursday,11:40,12:30,OHS,Engr. Aqib,C-13
 Thursday,13:30,16:05,AP Lab,Engr. Maryam,Physics Lab
 Friday,09:50,10:40,ICT,Engr. Asim,C-13
 Friday,08:00,08:50,English,Ms. Tahira,C-13
+
