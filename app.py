@@ -311,8 +311,8 @@ if section == "BSCE-1A":
         <div class="assignments-box">
             <h3>📝 Assignments Due for BSCE-1A</h3>
             <ul>
-                <li><b>Physics Lab:Complete Lab 1 and Lab 3 all tasks (DUE FRIDAY) </b> </li>
-                <li><b>ICT:write a brief two-page assignment on the history of computers (500-600 words). [Submission on Saturday through GCR] </b></li>
+                <li><b> </b> </li>
+                <li><b></b></li>
                 
             </ul>
         </div>
@@ -328,9 +328,9 @@ elif section == "BSCE-1B":
             <h3>📢 Notices for BSCE-1B</h3>
             <ul>
                 <li>Report any bugs or issues to me on whatsapp </li>
-                <li> Calculus Quiz is scheduled on Friday at 10:45am in C-15 </li>
-                <li> AP Quiz is scheduled on 15th Sept   li>
-                <li> <b>All classes scheduled for 8th and 9th Sept will be conducted online</b> </li>
+                <li>  </li>
+                <li>    </li>
+                <li> <b></b> </li>
                 
             </ul>
         </div>
@@ -343,11 +343,11 @@ elif section == "BSCE-1B":
         <div class="assignments-box">
             <h3>📝 Assignments Due for BSCE-1B</h3>
             <ul>
-                <li><b>ICT Lab:Complete Lab 2 : Intro to ChatGpt and overleaf (Submission on Monday) </b> </li>
+                <li><b>ICT Lab:Complete Lab 5 : Intro to Viso and Flutter flow (Submission on Monday) </b> </li>
                 <li><b>  </b></li>
-                <li><b> Applied Physics: Attempt Questions sent on GCR (Submission on 15th Sept) </b></li>
-                <li><b> Eng: Complete Excercise 7-15 in the manual </b></li>
-                <li><b> Calculus: Complete Chapter 2 & 3 Questions (Uploaded on GCR)</b><li>
+                <li><b>  </b></li>
+                <li><b> Eng:  </b></li>
+                <li><b> </b><li>
             </ul>
         </div>
         """,
