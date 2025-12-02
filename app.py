@@ -170,7 +170,7 @@ if section == "GPA Calc":
         unsafe_allow_html=True
     )
 
-    st.info("ℹ️ **Instructions:** Enter your obtained marks in the format **Obtained/Total** (e.g., `8/10`). Leave fields blank if the assessment hasn't happened yet; the system will project your score based on entered marks.")
+    st.info("ℹ️ **Instructions:** Enter your obtained marks or wieghtage in the format **Obtained/Total** (e.g., `8/10`). Leave fields blank if the assessment hasn't happened yet; the system will project your score based on entered marks.")
 
     # Helper function to parse "x/y" string
     def get_score_percentage(entry):
