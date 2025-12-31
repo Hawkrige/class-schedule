@@ -170,7 +170,7 @@ if section == "GPA Calc":
         unsafe_allow_html=True
     )
 
-    st.info("ℹ️ **Instructions:** Enter your obtained marks or wieghtage in the format **Obtained/Total** (e.g., `8/10`). Leave fields blank if the assessment hasn't happened yet; the system will project your score based on entered marks.")
+    st.info("ℹ️ **Instructions:** Enter your obtained marks in the format **Obtained/Total** (e.g., `8/10`). Leave fields blank if the assessment hasn't happened yet; the system will project your score based on entered marks.")
 
     # Helper function to parse "x/y" string
     def get_score_percentage(entry):
@@ -207,7 +207,7 @@ if section == "GPA Calc":
             "name": "OHS", "cr": 1,
             "components": [
                 ("Quiz 1", 10), ("Quiz 2", 10), ("Assignment 1", 5), ("Assignment 2", 5),
-                ("Report 1", 5), ("Report 2", 5), ("Mid 1", 15), ("Mid 2", 15), ("Finals", 40)
+                ("Report 1", 10), ("Mid 1", 15), ("Mid 2", 15), ("Finals", 40)
             ]
         },
         {
@@ -220,7 +220,8 @@ if section == "GPA Calc":
         {
             "name": "ICP", "cr": 2,
             "components": [
-                ("Quiz 1", 5), ("Quiz 2", 5), ("Quiz 3", 5), ("Quiz 4", 5),
+                ("Quiz 1", 3), ("Quiz 2", 3), ("Quiz 3", 3), ("Quiz 4", 3),
+                ("Assignment 1", 4), ("Assignment 2", 4),
                 ("Mid 1", 15), ("Mid 2", 15), ("Finals", 50)
             ]
         },
@@ -235,8 +236,8 @@ if section == "GPA Calc":
         {
             "name": "Applied Calculus", "cr": 3,
             "components": [
-                ("Quiz 1", 2), ("Quiz 2", 2), ("Quiz 3", 2), ("Quiz 4", 2),
-                ("Assignment 1", 3), ("Assignment 2", 3), ("Assignment 3", 3),
+                ("Quiz 1", 2), ("Quiz 2", 2), ("Quiz 3", 2), ("Quiz 4", 2), ("Quiz 5", 1),
+                ("Assignment 1", 3), ("Assignment 2", 4), ("Assignment 3", 4),
                 ("Mid 1", 15), ("Mid 2", 15), ("Final", 50)
             ]
         },
@@ -245,26 +246,27 @@ if section == "GPA Calc":
             "components": [
                 ("Assignment 1", 2), ("Assignment 2", 1), ("Assignment 3", 2),
                 ("Quiz 1", 2), ("Quiz 2", 1), ("Quiz 3", 2),
-                ("Mid 1", 15), ("Mid 2", 15), ("Project", 4), ("Presentation", 6), ("Final", 50)
+                ("Mid 1", 15), ("Mid 2", 15), ("Project", 6), ("Presentation", 4), ("Final", 50)
             ]
         },
         {
             "name": "ICT", "cr": 2,
             "components": [
-                ("Assignment 1", 5), ("Assignment 2", 5), ("Quiz 1", 5), ("Quiz 2", 5),
+                ("Assignment 1", 5), ("Assignment 2", 5), ("Assignment 3", 5),
+                ("Quiz 1", 5), ("Quiz 2", 5),
                 ("Mid 1", 15), ("Mid 2", 15), ("Final", 50)
             ]
         },
         {
             "name": "AP Lab", "cr": 1,
             "components": [
-                ("Quiz 1", 7), ("Quiz 2", 8), ("Lab work", 52), ("Project", 3), ("Final", 30)
+                ("Quiz 1", 2.5), ("Quiz 2", 2.5), ("Lab work", 52), ("Project", 8), ("Final", 35)
             ]
         },
         {
             "name": "ICT Lab", "cr": 1,
             "components": [
-                ("Lab work", 36), ("Quiz", 6), ("Project", 4), ("Final", 50)
+                ("Lab work", 36), ("Quiz", 6), ("Project", 8), ("Final", 50)
             ]
         }
     ]
@@ -563,6 +565,7 @@ else:
 # Footer
 # -------------------------
 st.markdown("<footer>Created by Wassay Ahmed</footer>", unsafe_allow_html=True)
+
 
 
 
