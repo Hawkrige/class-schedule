@@ -253,7 +253,7 @@ if section == "GPA Calc":
             "name": "ICT", "cr": 2,
             "components": [
                 ("Assignment 1", 5), ("Assignment 2", 5), ("Assignment 3", 5),
-                ("Quiz 1", 5), ("Quiz 2", 5),
+                ("Quiz 1", 2.5), ("Quiz 2", 2.5),
                 ("Mid 1", 15), ("Mid 2", 15), ("Final", 50)
             ]
         },
@@ -565,7 +565,6 @@ else:
 # Footer
 # -------------------------
 st.markdown("<footer>Created by Wassay Ahmed</footer>", unsafe_allow_html=True)
-
 
 
 
