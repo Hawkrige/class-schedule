@@ -1,17 +1,19 @@
 Day,Start_Time,End_Time,Course,Teacher,Venue
-Monday,08:55,09:45,Islamiat,Dr. Shahzad,C-14
-Monday,11:40,12:30,Islamiat,Dr. Shahzad,C-15
-Monday,12:35,13:25,Calculus,Engr. Qurat ul Ain,C-13
-Monday,14:25,16:05,English,Ms. Tahira,C-13
-Tuesday,08:00,08:50,Applied Physics,Engr. Maham,C-14
-Tuesday,09:50,11:35,Calculus,Engr. Qurat ul Ain,C-13
-Tuesday,12:35,14:20,ICP,Dr. Shahnawaz,C-14
-Wednesday,13:30,14:20,ICT,Engr. Asim,C-15
-Wednesday,14:25,15:15,UoS,Dr. Shahzad,C-12
-Thursday,10:45,13:25,ICT Lab,Engr.Zakir,DS Lab 6
-Thursday,08:00,08:50,Applied Physics,Engr. Maham,C-14
-Thursday,08:55,09:45,OHS,Engr. Aqib,D-22
-Thursday,13:30,16:05,AP Lab,Engr. Maryam,Physics Lab
-Friday,09:50,10:40,ICT,Engr. Asim,C-13
-Friday,08:00,08:50,English,Ms. Tahira,C-13
+Monday,11:15,13:30,PF lab ,Waseem Rauf , AB-2 - CY LAB-8
+Monday,14:15,15:00,PST ,Miss Khushboo ,C-15
+Tuesday,09:45,11:15,UoQ,Dr. Shahzad,C-14
+Tuesday,12:00,12:45,LCA ,Engr. Ahsan Khan,C-12
+Tuesday, 14:15,25:00, Ms. Khushboo , C-14
+Wednesday,09:00,09:45,DE ,Engr. Qurat Ul Ain,C-14
+Wednesday,12:45,13:30,LCA ,Engr. Ahsan Khan ,C-12
+Wednesday,13:30,15:45, PF ,Dr. Shahbaz Siddiqui ,AB-2 - CY LAB-8
+
+
+Thursday,09:00,10:30, DE ,Engr. Qurat Ul Ain , C-14
+Thursday,10:30,11:15 ,LCA ,Engr. Ahsan Khan ,C-12
+Thursday,12:45,15:00, CCE , Sir Ashad Ali ,D-24
+
+Friday,09:00,11:15,Engr Workshop ,Engr. Mariyam, Engr workshop lab
+Friday,11:15,13:30, LCA Lab , Engr. Qurat Ul Ain , AB2 Electronics Lab
+
 
